@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 650">
+  <defs>
+    <!-- We build custom clip paths so all our smooth lighting stays perfectly inside the chubby body! -->
+    <clipPath id="bodyClip">
+      <ellipse cx="200" cy="400" rx="130" ry="140"/>
+    </clipPath>
+    <clipPath id="headClip">
+      <ellipse cx="200" cy="250" rx="110" ry="105"/>
+    </clipPath>
+  </defs>
+
+  <!-- Deep Blue Vector Background -->
+  <rect width="400" height="650" fill="#243c7b"/>
+  
+  <path d="M 280 0 C 260 100, 400 150, 320 250 C 280 300, 380 400, 380 450 C 380 500, 250 550, 200 650 L 400 650 L 400 0 Z" fill="#1b2d5c"/>
+  <path d="M 180 550 C 250 600, 300 580, 350 650 L 400 650 L 400 550 Z" fill="#1b2d5c"/>
+
+  <!-- Super Cute Duckie Group! -->
+  <g id="duck">
+
+    <!-- Tail (a bit softer and wider now) -->
+    <path d="M 150 510 C 180 620, 220 620, 250 510 Z" fill="#aaaaaa"/>
+
+    <!-- Tucked-in, chubby little wings -->
+    <ellipse cx="85" cy="410" rx="25" ry="90" fill="#888888" transform="rotate(15 85 410)"/>
+    <ellipse cx="315" cy="410" rx="25" ry="90" fill="#888888" transform="rotate(-15 315 410)"/>
+
+    <!-- Main Body: Widened and shortened significantly to make it plump like a marshmallow! -->
+    <ellipse cx="200" cy="400" rx="130" ry="140" fill="#aaaaaa"/>
+    
+    <!-- Body Highlights & Shadows -->
+    <g clip-path="url(#bodyClip)">
+      <ellipse cx="140" cy="420" rx="80" ry="130" fill="#cccccc" transform="rotate(12 140 420)"/>
+      <ellipse cx="310" cy="400" rx="60" ry="150" fill="#888888" transform="rotate(-10 310 400)"/>
+    </g>
+
+    <!-- Beak: Shorter, wider, and much stubbier to look like a baby hatchling! -->
+    <path d="M 130 280 
+             Q 160 140 145 90
+             C 170 75 230 75 255 90
+             Q 240 140 270 280 Z" fill="#e76722"/>
+             
+    <path d="M 130 280 
+             Q 160 140 145 90
+             C 155 85 165 85 175 90
+             Q 170 140 145 280 Z" fill="#fb893c"/>
+
+    <!-- Main Head: Massively enlarged relative to the body (Classic "cute/chibi" proportions) -->
+    <ellipse cx="200" cy="250" rx="110" ry="105" fill="#b2b2b2"/>
+    
+    <!-- Head Snout Highlight -->
+    <g clip-path="url(#headClip)">
+      <ellipse cx="200" cy="235" rx="70" ry="70" fill="#d9d9d9"/>
+    </g>
+
+    <!-- Adorable Blush marks under the eyes! Instantly boosts cuteness. -->
+    <ellipse cx="125" cy="275" rx="16" ry="10" fill="#f4a4b5" opacity="0.6" transform="rotate(15 125 275)"/>
+    <ellipse cx="275" cy="275" rx="16" ry="10" fill="#f4a4b5" opacity="0.6" transform="rotate(-15 275 275)"/>
+
+    <!-- Eyes: Pushed further apart, enlarged, and lowered on the face -->
+    <ellipse cx="130" cy="240" rx="13" ry="18" fill="#2b2b2b" transform="rotate(25 130 240)"/>
+    <ellipse cx="270" cy="240" rx="13" ry="18" fill="#2b2b2b" transform="rotate(-25 270 240)"/>
+    
+    <!-- Added tiny white catchlights to give the eyes that sweet, glossy sparkle! -->
+    <ellipse cx="127" cy="232" rx="4" ry="6" fill="#ffffff" transform="rotate(25 127 232)"/>
+    <ellipse cx="267" cy="232" rx="4" ry="6" fill="#ffffff" transform="rotate(-25 267 232)"/>
+
+  </g>
+</svg>

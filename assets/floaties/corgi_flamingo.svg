@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 420">
+  <defs>
+    <!-- We clip the beak tip so it adheres perfectly to the curved edge of the beak! -->
+    <clipPath id="beakClip">
+      <path d="M 37 100 Q 10 160 45 230 Q 75 200 65 150 Q 55 120 70 95 Z" />
+    </clipPath>
+    <!-- A noise texture to recreate the "painted/paper" look from the reference! -->
+    <filter id="texture">
+      <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="3" stitchTiles="stitch"/>
+    </filter>
+  </defs>
+
+  <!-- Cool Aqua Water Background -->
+  <rect width="500" height="420" fill="#3fbacf"/>
+
+  <!-- Thick hand-painted style water ripples -->
+  <g fill="none" stroke="#7edde9" stroke-width="8" stroke-linecap="round" opacity="0.8">
+    <path d="M 440 230 C 420 330, 360 380, 270 380" />
+    <path d="M 470 210 C 460 310, 400 390, 300 400" />
+    <path d="M 120 330 C 70 310, 30 250, 10 180" />
+    <path d="M 110 360 C 50 330, 10 260, 0 200" />
+    <path d="M 400 100 C 430 120, 450 160, 450 200" />
+    <path d="M 300 60 C 330 60, 360 80, 380 100" />
+  </g>
+
+  <g transform="translate(0, 10)">
+    <!-- Flamingo Floatie Body (Massive solid ring) -->
+    <ellipse cx="300" cy="220" rx="150" ry="120" fill="#ff7360"/>
+    
+    <!-- Shadow inside the donut hole (gives depth below the corgi) -->
+    <ellipse cx="290" cy="220" rx="90" ry="50" fill="#e14c3e"/>
+    
+    <!-- Flamingo Neck (Perfect continuous tube using an ultra-thick stroke) -->
+    <path d="M 180 250 C 120 250, 70 200, 70 100" fill="none" stroke="#ff7360" stroke-width="65" stroke-linecap="round"/>
+    
+    <!-- Flamingo Base Neck Shadow overlapping the main donut -->
+    <path d="M 120 220 Q 150 190, 190 230 Q 150 250, 120 220 Z" fill="#e14c3e"/>
+
+    <!-- Floatie Highlights (Outer curve and head cap reflection) -->
+    <path d="M 400 140 C 450 180, 440 260, 390 310" fill="none" stroke="#ffad9e" stroke-width="12" stroke-linecap="round" opacity="0.8"/>
+    <ellipse cx="80" cy="80" rx="12" ry="7" fill="#ffad9e" opacity="0.9" transform="rotate(-35 80 80)"/>
+
+    <!-- Flamingo Eye -->
+    <circle cx="55" cy="88" r="14" fill="#fff7e2"/>
+    <circle cx="55" cy="88" r="7" fill="#122b3b"/>
+
+    <!-- Flamingo Beak (Base light color) -->
+    <path d="M 37 100 Q 10 160 45 230 Q 75 200 65 150 Q 55 120 70 95 Z" fill="#ffe3cf"/>
+    <!-- Dark Tip (Clipped perfectly inside the beak shape) -->
+    <g clip-path="url(#beakClip)">
+      <rect x="0" y="160" width="100" height="100" fill="#122b3b" transform="rotate(-10 50 160)"/>
+    </g>
+
+    <!-- === THE CORGI === -->
+
+    <!-- NEW: Corgi Butt/Back fluff showing behind the head inside the floatie hole! -->
+    <!-- Drawn BEFORE the ears and head so it sits cleanly in the background -->
+    <path d="M 230 110 
+             Q 230 65 260 70 
+             L 275 55 
+             L 290 70 
+             L 305 55 
+             L 320 70 
+             Q 350 65 350 110 Z" fill="#fffff5"/>
+    
+    <!-- Back Ears (Made stouter and cuter to match the shorter shape of the new face) -->
+    <!-- Left Ear -->
+    <path d="M 245 115 L 195 40 Q 220 10 260 70 L 275 105 Z" fill="#e66a15"/>
+    <path d="M 245 105 L 205 50 Q 225 30 250 70 L 265 100 Z" fill="#db8d53"/>
+    <!-- Right Ear -->
+    <path d="M 335 115 L 385 40 Q 360 10 320 70 L 305 105 Z" fill="#e66a15"/>
+    <path d="M 335 105 L 375 50 Q 355 30 330 70 L 315 100 Z" fill="#db8d53"/>
+
+    <!-- Main Orange Fluffy Head Shape (NEW: Compressed vertically for a stubby, ultra-cute face!) -->
+    <path d="M 220 160 
+             Q 220 105 290 105 
+             Q 360 105 360 160 
+             Q 360 210 325 240 
+             Q 290 270 255 240 
+             Q 220 210 220 160 Z" fill="#e66a15"/>
+
+    <!-- White Snout / Muzzle Stripe with wide spread at the cute bottom -->
+    <path d="M 275 105 
+             Q 290 115 305 105 
+             L 310 140 
+             Q 340 180 325 240 
+             Q 290 270 255 240 
+             Q 240 180 270 140 Z" fill="#fffff5"/>
+
+    <!-- Paws dangling over the front of the donut rim! -->
+    <!-- Left Paw -->
+    <rect x="210" y="240" width="45" height="70" rx="22.5" ry="22.5" fill="#fffff5"/>
+    <line x1="222" y1="295" x2="222" y2="305" stroke="#1e1e23" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="232" y1="298" x2="232" y2="308" stroke="#1e1e23" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="242" y1="295" x2="242" y2="305" stroke="#1e1e23" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Right Paw -->
+    <rect x="325" y="240" width="45" height="70" rx="22.5" ry="22.5" fill="#fffff5"/>
+    <line x1="337" y1="295" x2="337" y2="305" stroke="#1e1e23" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="347" y1="298" x2="347" y2="308" stroke="#1e1e23" stroke-width="2.5" stroke-linecap="round"/>
+    <line x1="357" y1="295" x2="357" y2="305" stroke="#1e1e23" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- NEW: Tiny Corgi Black Nose (Moved much higher up the snout to fit the stubby face!) -->
+    <ellipse cx="290" cy="245" rx="14" ry="8" fill="#1e1e23"/>
+
+    <!-- Cool Dark Sunglasses! -->
+    <!-- Left Frame & Lens -->
+    <g transform="rotate(-8 250 180)">
+      <rect x="220" y="160" width="60" height="40" rx="10" ry="15" fill="#2c393c"/>
+      <rect x="226" y="166" width="48" height="28" rx="6" ry="10" fill="#122b3b"/>
+      <!-- Lens glass reflection -->
+      <path d="M 230 166 L 255 166 L 245 194 L 226 194 Z" fill="#54a6c4"/>
+    </g>
+
+    <!-- Right Frame & Lens -->
+    <g transform="rotate(8 330 180)">
+      <rect x="300" y="160" width="60" height="40" rx="10" ry="15" fill="#2c393c"/>
+      <rect x="306" y="166" width="48" height="28" rx="6" ry="10" fill="#122b3b"/>
+      <path d="M 310 166 L 335 166 L 325 194 L 306 194 Z" fill="#54a6c4"/>
+    </g>
+
+    <!-- Thick Glasses Bridge -->
+    <path d="M 270 178 Q 290 173 310 178" fill="none" stroke="#2c393c" stroke-width="10" stroke-linecap="round"/>
+    
+  </g>
+
+  <!-- Final magic touch: A subtle procedural noise overlay to perfectly recreate the "grainy paper/gouache painting" texture of your reference! -->
+  <rect width="100%" height="100%" filter="url(#texture)" opacity="0.08" pointer-events="none"/>
+</svg>
