@@ -2,7 +2,7 @@
 
 An interactive illustrated swimming pool. Top-down, kidney-bean shaped, surrounded by botanicals. Drop floaties in. Watch the water move.
 
-**[Live demo →](https://sy.github.io/Frond---Fauna)**
+**[Live demo →](https://isaliana.github.io/frond-and-fauna)**
 
 ---
 
