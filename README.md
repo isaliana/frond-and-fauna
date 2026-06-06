@@ -10,18 +10,19 @@ An interactive illustrated swimming pool. Top-down, kidney-bean shaped, surround
 
 A single-file creative experiment: illustrated pool scene with real-time wave physics, draggable floaties, and hand-drawn botanical overlays. No framework, no build step — open `index.html` and it runs.
 
-The pool water uses a 2D Laplacian wave grid with caustic shimmer rendered on a canvas overlay. Ducks are autonomous — they pick targets and swim, leaving wake ripples behind them. Other floaties drift with the current.
+The pool water uses a 2D Laplacian wave grid with Worley-cell caustic shimmer rendered on a canvas overlay. Ducks and a curly little swimming dog are autonomous — they pick targets, paddle toward them, and leave wake ripples behind. Other floaties (beach ball, life ring, corgi on a flamingo float) drift with the current.
 
 ---
 
 ## Features
 
-- **Live water simulation** — click anywhere in the pool to send ripples; wave energy propagates across the grid frame by frame
-- **Floatie palette** — drag beach balls, life rings, rubber ducks (white, yellow, grey), or a corgi on a flamingo float into the pool
-- **Autonomous swimmers** — ducks self-propel, steer toward random targets, and re-route when they reach the edge
-- **Wake physics** — each swimmer generates ripples proportional to its velocity
-- **Botanical frames** — layered SVG greenery composited with `mix-blend-mode: multiply` for a hand-illustrated feel
-- **Draggable decorations** — scatter leaves and botanicals around the pool deck from the palette
+- **Live water simulation** — click and hold anywhere in the pool to send rippling rings; wave energy propagates across a grid frame by frame
+- **Floatie palette** — drag beach balls, life rings, rubber ducks (white, yellow, grey), a swimming dog, or a corgi on a flamingo float into the pool
+- **Autonomous swimmers** — ducks and the dog self-propel, steer toward random targets, and re-route when they reach the edge
+- **Wake physics** — each swimmer emits expanding rings proportional to its velocity
+- **Animated sub-elements** — duck tails wiggle, dog paws paddle in diagonal pairs, corgi ears flap happily, leaves sway in a soft breeze
+- **Botanical frames** — three layered SVG greenery overlays (background + corner + palm-leaf) composited with `mix-blend-mode: multiply` for a hand-illustrated feel
+- **Draggable decorations** — scatter tropical leaves and a random sample of 12 botanicals around the pool deck from the palette
 
 ---
 
@@ -29,11 +30,11 @@ The pool water uses a 2D Laplacian wave grid with caustic shimmer rendered on a 
 
 ```
 assets/
-  botanicals/    palm leaves, tropical leaves, frame overlays (SVG)
+  botanicals/    palm leaves, tropical leaves, frame overlays, 60-cell botanical grid (SVG)
   floaties/      duckie_white, duckie_yellow, duckie_grey, corgi_flamingo (SVG)
 ```
 
-Floaties are embedded inline as SVG templates on drop, with namespaced IDs so multiple instances don't collide on clipPath/filter definitions.
+The swimming dog is drawn entirely inline in `index.html` (no external asset). Floaties are embedded inline as SVG templates and stamped on drop with namespaced IDs so multiple instances don't collide on clipPath/filter definitions.
 
 ---
 
