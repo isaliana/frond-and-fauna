@@ -4,6 +4,8 @@ An interactive illustrated swimming pool. Top-down, kidney-bean shaped, surround
 
 **[Live demo →](https://isaliana.github.io/frond-and-fauna)**
 
+![Clicking the pool sends ripples across the water while ducks and a swimming dog paddle around, leaving wakes](assets/demo.gif)
+
 ---
 
 ## What it is
@@ -35,6 +37,8 @@ assets/
 ```
 
 The swimming dog is drawn entirely inline in `index.html` (no external asset). Floaties are embedded inline as SVG templates and stamped on drop with namespaced IDs so multiple instances don't collide on clipPath/filter definitions.
+
+Some botanical illustrations are from free online sources and remain the property of their original creators.
 
 ---
 
